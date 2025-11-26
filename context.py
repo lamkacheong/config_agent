@@ -27,11 +27,11 @@ class AgentContext(BaseModel):
     #     "Should be in the form: provider/model-name."
     # )
     #
-    # selected_tools: list[Literal["finance_research", "advanced_research", "basic_research", "get_todays_date"]] = Field(
-    #     default = ["get_todays_date"],
-    #     description="The list of tools to use for the agent's interactions. "
-    #     "This list should contain the names of the tools to use."
-    # )
+    selected_tools: list[Literal["get_todays_date", "internet_search"]] = Field(
+        default = ["get_todays_date"],
+        description="The list of tools to use for the agent's interactions. "
+        "This list should contain the names of the tools to use."
+    )
 
     name: str = Field(
         default="react_agent",
